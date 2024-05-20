@@ -41,4 +41,15 @@ document.getElementById('alphanumericInput').addEventListener('input', function 
     // Here you can process the combined value as needed
     // For example, sending it to the server or further validation
   });
+  document.getElementById('customInput2').addEventListener('input', function (e) {
+    const inputField = e.target;
+    const value = inputField.value;
+
+    // Check if the first two characters are digits
+    if (/^\d{2}$/.test(value)) {
+      inputField.setAttribute('inputmode', 'text');
+    } else if (value.length < 2) {
+      inputField.setAttribute('inputmode', 'numeric');
+    }
+  });
 });
