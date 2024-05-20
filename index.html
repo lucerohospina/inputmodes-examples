@@ -25,14 +25,31 @@
       <label style="display: block;">Input with numeric INPUTMODE and text TYPE</label>
       <input type="text" inputmode="numeric">
     </div>
-    <div>
+    <div style="margin-bottom: 1.5rem;">
       <label style="display: block;">Input with search INPUTMODE and text TYPE</label>
       <input type="text" inputmode="search">
     </div>
-    <div>
+    <div style="margin-bottom: 1.5rem;">
       <label style="display: block;">Input with search INPUTMODE and search TYPE</label>
       <input type="search" inputmode="search">
     </div>
   </form>
+
+  <form>
+    <h3>Input Example with Toggle Keyboard</h3>
+    <div>
+      <label style="display: block;">Input (27A):</label>
+      <input style="display: block;" id="customInput" type="text" inputmode="numeric">
+      <button style="margin-top: 1.5rem;" type="button" onclick="toggleInputMode()">Toggle Keyboard</button>
+    </div>
+  </form>
+
+  <form>
+    <h3>Input Example</h3>
+    <div>
+      <label for="alphanumeric">Enter a value (e.g., 1A, 27B):</label>
+      <input type="text" id="alphanumeric" name="alphanumeric" inputmode="text">
+    </div>
+  </form>  
 </body>
 </html>
