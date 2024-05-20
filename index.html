@@ -10,16 +10,28 @@
   <form>
     <h3 style="margin-bottom: 1.5rem;">Input type examples</h3>
     <div style="margin-bottom: 1.5rem;">
-      <label style="display: block;">Label without inputmode</label>
+      <label style="display: block;">Input without inputmode</label>
       <input>
     </div>
     <div style="margin-bottom: 1.5rem;">
-      <label style="display: block;">Label with numeric inputmode</label>
+      <label style="display: block;">Input with text inputmode</label>
+      <input inputmode="text">
+    </div>
+    <div style="margin-bottom: 1.5rem;">
+      <label style="display: block;">Input with numeric INPUTMODE</label>
       <input inputmode="numeric">
     </div>
     <div style="margin-bottom: 1.5rem;">
-      <label style="display: block;">Label with text inputmode</label>
-      <input inputmode="text">
+      <label style="display: block;">Input with numeric INPUTMODE and text TYPE</label>
+      <input type="text" inputmode="numeric">
+    </div>
+    <div>
+      <label style="display: block;">Input with search INPUTMODE and text TYPE</label>
+      <input type="text" inputmode="search">
+    </div>
+    <div>
+      <label style="display: block;">Input with search INPUTMODE and search TYPE</label>
+      <input type="search" inputmode="search">
     </div>
   </form>
 </body>
