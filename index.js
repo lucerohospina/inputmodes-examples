@@ -25,36 +25,37 @@ document.getElementById('alphanumericInput').addEventListener('input', function 
     e.target.setAttribute('inputmode', 'numeric');
     e.target.focus();
   }
+});
 
-  document.getElementById('alphanumericForm').addEventListener('submit', function (e) {
-    e.preventDefault();
+document.getElementById('alphanumericForm').addEventListener('submit', function (e) {
+  e.preventDefault();
 
-    var numberValue = document.getElementById('numberInput').value;
-    var letterValue = document.getElementById('letterInput').value;
+  var numberValue = document.getElementById('numberInput').value;
+  var letterValue = document.getElementById('letterInput').value;
 
-    var combinedValue = numberValue + letterValue;
-    document.getElementById('combinedInput').value = combinedValue;
+  var combinedValue = numberValue + letterValue;
+  document.getElementById('combinedInput').value = combinedValue;
 
-    // For demonstration purposes, alert the combined value
-    alert('Combined Value: ' + combinedValue);
+  // For demonstration purposes, alert the combined value
+  alert('Combined Value: ' + combinedValue);
 
-    // Here you can process the combined value as needed
-    // For example, sending it to the server or further validation
-  });
-  document.getElementById('customInput2').addEventListener('input', function (e) {
-    const inputField = e.target;
-    const value = inputField.value;
+  // Here you can process the combined value as needed
+  // For example, sending it to the server or further validation
+});
 
-    console.log('inputField', inputField);
-    console.log('value', value);
+document.getElementById('customInput2').addEventListener('input', function (e) {
+  const inputField = e.target;
+  const value = inputField.value;
 
-    // Check if the first two characters are digits
-    if (/^\d{2}$/.test(value)) {
-      inputField.setAttribute('inputmode', 'text');
-      console.log('text');
-    } else if (value.length < 2) {
-      inputField.setAttribute('inputmode', 'numeric');
-      console.log('numeric');
-    }
-  });
+  console.log('inputField', inputField);
+  console.log('value', value);
+
+  // Check if the first two characters are digits
+  if (/^\d{2}$/.test(value)) {
+    inputField.setAttribute('inputmode', 'text');
+    console.log('text');
+  } else if (value.length < 2) {
+    inputField.setAttribute('inputmode', 'numeric');
+    console.log('numeric');
+  }
 });
