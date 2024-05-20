@@ -74,10 +74,18 @@
   </form>
 
   <form>
-    <h3>Input Example with Automatic Keyboard Switch</h3>
+    <h3>Input Example with Automatic Keyboard Switch (two numbers first)</h3>
     <div>
       <label for="customInput2">Input (e.g., 1A, 27A):</label>
       <input id="customInput2" type="text" inputmode="numeric"">
+    </div>
+  </form>
+
+  <form>
+    <h3>Input Example with Automatic Keyboard Switch</h3>
+    <div>
+      <label for="customInput3">Input (e.g., 1A, 5C, 15A, 27B):</label>
+      <input id="customInput3" type="text" inputmode="numeric">
     </div>
   </form>
 
@@ -141,6 +149,18 @@
     } else if (value.length < 2) {
       inputField.setAttribute('inputmode', 'numeric');
       console.log('numeric');
+    }
+  });
+
+  document.getElementById('customInput3').addEventListener('input', function (e) {
+    const inputField = e.target;
+    const value = inputField.value;
+
+    // Check if the input is a digit followed by an optional second digit
+    if (/^\d{1,2}$/.test(value)) {
+      inputField.setAttribute('inputmode', 'numeric');
+    } else {
+      inputField.setAttribute('inputmode', 'text');
     }
   });
   </script>
