@@ -45,6 +45,9 @@ document.getElementById('alphanumericInput').addEventListener('input', function 
     const inputField = e.target;
     const value = inputField.value;
 
+    console.log('inputField', inputField);
+    console.log('value', value);
+
     // Check if the first two characters are digits
     if (/^\d{2}$/.test(value)) {
       inputField.setAttribute('inputmode', 'text');
