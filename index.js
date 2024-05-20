@@ -48,8 +48,10 @@ document.getElementById('alphanumericInput').addEventListener('input', function 
     // Check if the first two characters are digits
     if (/^\d{2}$/.test(value)) {
       inputField.setAttribute('inputmode', 'text');
+      console.log('text');
     } else if (value.length < 2) {
       inputField.setAttribute('inputmode', 'numeric');
+      console.log('numeric');
     }
   });
 });
