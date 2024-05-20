@@ -58,5 +58,19 @@
       <input type="text" id="alphanumericInput" inputmode="numeric">
     </div>
   </form>
+
+  <form id="alphanumericForm">
+    <h3>COMBINE: Enter Value (e.g., 1A, 27B):</h3>
+    <div>
+      <label for="numberInput">Number:</label>
+      <input type="text" id="numberInput" inputmode="numeric" maxlength="2" placeholder="Enter number">
+    </div>
+    <div>
+      <label for="letterInput">Letter:</label>
+      <input type="text" id="letterInput" inputmode="text" maxlength="1" placeholder="Enter letter">
+    </div>
+    <input type="hidden" id="combinedInput" name="combinedValue">
+    <button type="submit">Submit</button>
+  </form>
 </body>
 </html>

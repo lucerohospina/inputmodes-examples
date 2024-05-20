@@ -25,4 +25,20 @@ document.getElementById('alphanumericInput').addEventListener('input', function 
     e.target.setAttribute('inputmode', 'numeric');
     e.target.focus();
   }
+
+  document.getElementById('alphanumericForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    var numberValue = document.getElementById('numberInput').value;
+    var letterValue = document.getElementById('letterInput').value;
+
+    var combinedValue = numberValue + letterValue;
+    document.getElementById('combinedInput').value = combinedValue;
+
+    // For demonstration purposes, alert the combined value
+    alert('Combined Value: ' + combinedValue);
+
+    // Here you can process the combined value as needed
+    // For example, sending it to the server or further validation
+  });
 });
